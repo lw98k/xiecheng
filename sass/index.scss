@@ -1,0 +1,278 @@
+@function pr($p) {
+    @return $p/41.4+rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+body {
+    font-size: pr(14);
+}
+
+.containert {
+    position: relative;
+    .header {
+        z-index: 100;
+        position: fixed;
+        width: 100%;
+        height: pr(45);
+        background-color: #f6f6f6;
+        border-bottom: pr(1) solid #ccc;
+        display: flex;
+        align-items: center;
+        padding: pr(10);
+        input {
+            border: pr(1) solid #cccccc;
+            height: pr(28);
+            flex: 1;
+            border-radius: pr(5);
+            padding-left: pr(30);
+            background: url('../imgs/glass.png') no-repeat pr(6) pr(6)/pr(20) auto;
+            box-shadow: pr(-1) pr(1) pr(1) #ccc;
+        }
+        a {
+            margin-left: pr(5);
+            flex-basis: pr(39);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                width: pr(20);
+            }
+            span {
+                color: #099fde;
+                font-size: pr(15);
+            }
+        }
+    }
+    .main {
+        padding: pr(45) pr(5) pr(0) pr(5);
+        background-color: #dddddd;
+        .banner {
+            margin: pr(0) pr(-5);
+            img {
+                width: 100%;
+            }
+            .swiper-pagination {
+                margin-bottom: pr(-10);
+                text-align: right;
+                .swiper-pagination-bullet {
+                    width: pr(6);
+                    height: pr(6);
+                    border-radius: pr(3);
+                }
+                .swiper-pagination-bullet-active {
+                    width: pr(15);
+                    background-color: #fff;
+                }
+            }
+        }
+        .nav {
+            margin-top: pr(5);
+            height: pr(100);
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+            padding: pr(9) pr(0);
+            border-radius: pr(5);
+            a {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                img {
+                    width: pr(57);
+                    height: pr(57);
+                }
+                span {
+                    font-size: pr(16);
+                    color: #666666;
+                }
+            }
+        }
+        .center {
+            margin-top: pr(5);
+            .section1 {
+                background: linear-gradient(to right, #fa5a55, #fa9a4e);
+                border-top-left-radius: pr(10);
+                border-top-right-radius: pr(10);
+                .left {
+                    background: url("../imgs/item1.png") center bottom / 100% auto no-repeat;
+                }
+                @media screen and(min-width:500px) {
+                    .left {
+                        background-size: pr(134) auto;
+                    }
+                }
+            }
+            .section2 {
+                background: linear-gradient(to right, #4b91ed, #53baed);
+                margin: pr(5) pr(0);
+                .left {
+                    background: url("../imgs/item2.png") center bottom / 100% auto no-repeat;
+                }
+                @media screen and(min-width:500px) {
+                    .left {
+                        background-size: pr(134) auto;
+                    }
+                }
+            }
+            .section3 {
+                background: linear-gradient(to right, #34c2a8, #6ad359);
+                border-bottom-left-radius: pr(10);
+                border-bottom-right-radius: pr(10);
+                .left {
+                    background: url("../imgs/item3.png") center bottom / 100% auto no-repeat;
+                }
+                @media screen and(min-width:500px) {
+                    .left {
+                        background-size: pr(134) auto;
+                    }
+                }
+            }
+            .section {
+                height: pr(100);
+                display: flex;
+                .left {
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    padding-top: pr(21);
+                    border-right: pr(1) solid #fff;
+                    a {
+                        color: white;
+                    }
+                }
+                .right {
+                    flex: 2;
+                    display: flex;
+                    flex-wrap: wrap;
+                    a {
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        &:nth-child(1),
+                        &:nth-child(3) {
+                            border-right: pr(1) solid #ffffff;
+                        }
+                        &:nth-child(1),
+                        &:nth-child(2) {
+                            border-bottom: pr(1) solid #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+        .subnav {
+            height: pr(120);
+            background-color: #fff;
+            border-radius: pr(5);
+            display: flex;
+            flex-wrap: wrap;
+            padding: pr(9) pr(0);
+            margin-top: pr(5);
+            a {
+                width: 16.666666666%;
+                display: flex;
+                flex-direction: column;
+                align-items: center; //    justify-content: space-between;
+                img {
+                    width: pr(25);
+                    height: pr(25);
+                }
+                span {
+                    font-size: pr(14);
+                    color: #666;
+                }
+            }
+        }
+    }
+}
+
+.searchpage {
+    display: none;
+    .header {
+        z-index: 100;
+        position: fixed;
+        width: 100%;
+        height: pr(45);
+        background-color: #e6f0f7;
+        border-bottom: pr(1) solid #ccc;
+        display: flex;
+        align-items: center;
+        padding: pr(10);
+        .back {
+            flex-basis: pr(30);
+            background: url("../imgs/back.png") pr(0) pr(0)/auto pr(30) no-repeat;
+            height: pr(30);
+        }
+        input {
+            border: pr(1) solid #cccccc;
+            height: pr(28);
+            flex: 1;
+            border-radius: pr(5);
+            padding-left: pr(30);
+            background: url('../imgs/glass.png') no-repeat pr(6) pr(6)/pr(20) auto #ffffff;
+            box-shadow: pr(-1) pr(1) pr(1) #ccc;
+        }
+        .search {
+            margin-left: pr(5);
+            flex-basis: pr(39);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: pr(14);
+            color: #666666;
+        }
+    }
+    .searchhistory {
+        padding-top: pr(45);
+        .title {
+            font-size: pr(14);
+            background-color: #f6f6f6;
+            height: pr(30);
+            line-height: pr(30);
+            padding: pr(0) pr(10);
+            color: #666;
+        }
+
+        .searchlist{
+            li{
+                height: pr(50);
+                line-height: pr(50);
+                padding: pr(0) pr(30);
+                background-color: #fff;
+                border-top: 1px solid #ccc;
+                color: #666;
+            }
+            .clear {
+                color: #03a9f4;
+                text-align: center;
+            }
+
+
+        }
+    }
+}

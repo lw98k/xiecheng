@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        document.querySelector("html").style.fontSize = window.screen.width / 10 + "px";
+
+        if (window.screen.width >= 500) {
+            document.querySelector("html").style.fontSize = "50px";
+        }
+    </script>
+    <script src="./lib/jquery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./lib/jquery/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+    <!-- 首页 -->
+    <div class="containert">
+        <!-- 头部 -->
+        <div class="header">
+            <input type="text" placeholder="酒店/目的地/景点/航班">
+            <a href="">
+                <img src="./imgs/icon.png" alt="">
+                <span>我的</span>
+            </a>
+        </div>
+        <div class="main">
+            <div class="banner">
+
+                <div class="swiper-container">
+                    <!-- 每一屏 -->
+                    <div class="swiper-wrapper">
+                        <img src="./imgs/banner01.jpg" alt="" class="swiper-slide">
+                        <img src="./imgs/banner02.jpg" alt="" class="swiper-slide">
+                        <img src="./imgs/banner03.jpg" alt="" class="swiper-slide">
+                        <img src="./imgs/banner04.jpg" alt="" class="swiper-slide">
+                    </div>
+                    <!-- 小点点 -->
+                    <div class="swiper-pagination">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="nav">
+                <a href="">
+                    <img src="./imgs/nav1.png" alt="">
+                    <span>一日游</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/nav2.png" alt="">
+                    <span>一日游</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/nav3.png" alt="">
+                    <span>一日游</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/nav4.png" alt="">
+                    <span>一日游</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/nav5.png" alt="">
+                    <span>一日游</span>
+                </a>
+            </div>
+            <div class="center">
+                <div class="section section1">
+                    <div class="left">
+                        <a href="">机票</a>
+
+                    </div>
+                    <div class="right">
+                        <a href="">住酒店</a>
+                        <a href="">住酒店</a>
+                        <a href="">住酒店</a>
+                        <a href="">住酒店</a>
+                    </div>
+
+                </div>
+                <div class="section section2">
+                    <div class="left">
+                        <a href="">旅游</a>
+
+                    </div>
+                    <div class="right">
+                        <a href="">住酒店</a>
+                        <a href="">住酒店</a>
+                        <a href="">住酒店</a>
+                        <a href="">住酒店</a>
+                    </div>
+
+                </div>
+                <div class="section section3">
+                    <div class="left">
+                        <a href="">酒店</a>
+
+                    </div>
+                    <div class="right">
+                        <a href="">住酒店</a>
+                        <a href="">住酒店</a>
+                        <a href="">住酒店</a>
+                        <a href="">住酒店</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="subnav">
+                <a href="">
+                    <img src="./imgs/subnav1.png" alt="">
+                    <span>签证</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav2.png" alt="">
+                    <span>签证</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav3.png" alt="">
+                    <span>签证</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav4.png" alt="">
+                    <span>签证</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav5.png" alt="">
+                    <span>签证</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav6.png" alt="">
+                    <span>签证</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav7.png" alt="">
+                    <span>签证</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav8.png" alt="">
+                    <span>签证</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav9.png" alt="">
+                    <span>签证</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav10.png" alt="">
+                    <span>签证</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav11.png" alt="">
+                    <span>签证</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav12.png" alt="">
+                    <span>签证</span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- 搜索页 -->
+    <div class="searchpage">
+        <div class="header">
+            <a class="back"></a>
+
+            <input type="text" placeholder="酒店/目的地/景点/航班">
+            <a class="search">搜索</a>
+        </div>
+
+
+        <div class="searchhistory">
+
+
+        </div>
+
+
+    </div>
+    <script type="text/html" id="tpl">
+
+        <p class="title">搜索历史记录</p>
+        <ul class="searchlist">
+            {{each list value}}
+            <li>{{value}}</li>
+            {{/each}}
+            <li class="clear">清除历史</li>
+        </ul>
+
+    </script>
+</body>
+
+</html>
